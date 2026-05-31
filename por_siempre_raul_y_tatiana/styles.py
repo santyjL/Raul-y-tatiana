@@ -14,3 +14,11 @@ body= dict[str, str](
     font_family="Montserrat",
     background=Colores.BACKGROUND.value
 )
+
+imagen_index_style= dict[str,str](
+    margin=0,
+    padding=0,
+    width="100%",
+    height="auto",
+    loading="lazy"
+)
