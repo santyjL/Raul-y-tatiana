@@ -10,9 +10,11 @@ class Colores(Enum):
 body= dict[str, str](
     margin=0,
     width="100%",
-    height="100vh",
-    font_family="Montserrat",
-    background=Colores.BACKGROUND.value
+    min_height="100vh",
+    font_family="Oranienbaum",
+    text_align="center",
+    background=Colores.BACKGROUND.value,
+    background_size="cover"
 )
 
 imagen_index_style= dict[str,str](
@@ -21,4 +23,14 @@ imagen_index_style= dict[str,str](
     width="100%",
     height="auto",
     loading="lazy"
+)
+
+texto_style=dict[str,str](
+    margin="10px auto",
+    max_width="1100px",
+    font_size="4.5em",
+    font_weight="bold",
+    font_family="Oranienbaum",
+    text_wrap="pretty",
+    color=Colores.PRIMARIO.value,
 )
