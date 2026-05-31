@@ -1,0 +1,2 @@
+reflex-image-zoom==0.0.2
+reflex==0.9.3
