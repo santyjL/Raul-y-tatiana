@@ -25,6 +25,16 @@ imagen_index_style= dict[str,str](
     loading="lazy"
 )
 
+titulo_style=dict[str,str](
+    margin="10px auto",
+    max_width="900px",
+    font_size="7.5em",
+    font_weight="bold",
+    font_family="Oranienbaum",
+    text_wrap="pretty",
+    color=Colores.PRIMARIO.value,
+)
+
 texto_style=dict[str,str](
     margin="10px auto",
     max_width="1100px",

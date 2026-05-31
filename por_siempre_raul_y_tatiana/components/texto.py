@@ -6,3 +6,9 @@ def texto_plantilla(texto:str) -> rx.Component:
         texto,
         style= texto_style
     )
+
+def Titulo_plantilla(texto:str) -> rx.Component:
+    return rx.text(
+        texto,
+        style= titulo_style
+    )
