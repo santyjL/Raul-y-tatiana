@@ -1,7 +1,7 @@
 from enum import Enum
 
 class Colores(Enum):
-    BACKGROUND= "#fff"
+    BACKGROUND= "#f7f7f7"
     PRIMARIO="#136"
     SECUNDARIO="#16a"
 
@@ -27,20 +27,29 @@ imagen_index_style= dict[str,str](
 
 titulo_style=dict[str,str](
     margin="10px auto",
-    max_width="900px",
-    font_size="7.5em",
+    max_width="1400px",
+    font_size="5.5em",
     font_weight="bold",
     font_family="Oranienbaum",
     text_wrap="pretty",
-    color=Colores.PRIMARIO.value,
+    color=Colores.SECUNDARIO.value,
 )
 
 texto_style=dict[str,str](
     margin="10px auto",
     max_width="1100px",
     font_size="4.5em",
-    font_weight="bold",
     font_family="Oranienbaum",
     text_wrap="pretty",
+    color=Colores.PRIMARIO.value,
+)
+
+texto_pequeño_style=dict[str,str](
+    margin="10px auto",
+    max_width="1100px",
+    font_size="3.5em",
+    font_family="Oranienbaum",
+    text_wrap="pretty",
+    text_align="justify",
     color=Colores.PRIMARIO.value,
 )
