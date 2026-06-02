@@ -77,6 +77,15 @@ def index() -> rx.Component:
                     texto_alternativo="Recepción"
                 ),
             ),
+            rx.divider(
+                height="250px",
+                width="100%",
+                background="transparent",
+            ),
+            imagen_index(
+                url="pagina-principal/BACKGROUND_FINAL.png",
+                texto_alternativo="final de agina"
+            ),
             style=body
         )
     )
