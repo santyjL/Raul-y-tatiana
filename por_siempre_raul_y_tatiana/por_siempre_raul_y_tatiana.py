@@ -1,7 +1,8 @@
 import reflex as rx
 from por_siempre_raul_y_tatiana.styles import body
-from por_siempre_raul_y_tatiana.components.imagenes import imagen_index
-from por_siempre_raul_y_tatiana.components.texto import texto_plantilla, texto_pequeño_plantilla, titulo_plantilla
+from por_siempre_raul_y_tatiana.components.imagenes import imagen_index, imagen_body
+from por_siempre_raul_y_tatiana.components.texto import texto_plantilla, texto_pequeño_plantilla, titulo_plantilla, titulo_plantilla_hersmoso
+from por_siempre_raul_y_tatiana.components.componentes import iconos_plantilla
 
 def index() -> rx.Component:
     return rx.box(
@@ -30,8 +31,54 @@ def index() -> rx.Component:
                 de esta historia 9 años después. hemos decidido unir
                 nuestras vidas para siempre.""",
             ),
-        ),
-        style=body
+            rx.divider(
+                height="250px",
+                width="100%",
+                background="transparent",
+            ),
+            rx.hstack(
+                imagen_body(
+                    url="pagina-principal/PRIMERA.png",
+                    texto_alternativo="Nuestra boda"
+                ),
+                rx.vstack(
+                    titulo_plantilla(
+                        "Ceremonia Religiosa"
+                        ),
+                    titulo_plantilla_hersmoso(
+                        "Parroquia San Juan Pablo II"
+                    ),
+                    iconos_plantilla(
+                        "church"
+                    ),
+                    width="50%",
+                )
+            ),
+            rx.divider(
+                height="250px",
+                width="100%",
+                background="transparent",
+            ),
+            rx.hstack(
+                rx.vstack(
+                    titulo_plantilla(
+                        "Recepción"
+                        ),
+                    titulo_plantilla_hersmoso(
+                        "Restaurante Pikitos Nica-Mex"
+                    ),
+                    iconos_plantilla(
+                        "party-popper"
+                    ),
+                    width="50%",
+                ),
+                imagen_body(
+                    url="pagina-principal/RECEPCION.png",
+                    texto_alternativo="Recepción"
+                ),
+            ),
+            style=body
+        )
     )
 
 app = rx.App(
