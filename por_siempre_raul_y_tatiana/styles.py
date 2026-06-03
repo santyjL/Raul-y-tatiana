@@ -92,6 +92,7 @@ tiempo_transcurrido_caja_style=dict[str,str](
     border="2px solid #48e",
     border_radius="15px",
     box_shadow="0 0 90px 10px #48eb",
+    pointer="focus",
     background=Colores.PRIMARIO.value,
     z_index=20
 )
@@ -106,4 +107,22 @@ tiempo_transcurrido_style=dict[str,str](
     background=Colores.SECUNDARIO.value,
     font_family="Oranienbaum",
     font_size="6em"
+)
+
+boton_pagina_recuerdos_style=dict[str,str](
+    font_size="1.7em",
+    font_family="Dancing Script",
+    max_width="400px",
+    color="#fff",
+    margin="0 auto",
+    border="2px solid #fff",
+    border_radius="15px",
+    padding="10px 0",
+    position="relative",
+    top="-150px",
+    box_shadow="0 0 40px 10px #48eb",
+    background=Colores.PRIMARIO.value,
+    pointer="focus",
+    transform="padding 1s ease",
+
 )

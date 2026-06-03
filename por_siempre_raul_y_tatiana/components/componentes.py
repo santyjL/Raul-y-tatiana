@@ -1,6 +1,6 @@
 import reflex as rx
 from por_siempre_raul_y_tatiana.styles import (iconos_plantilla_style, tiempo_transcurrido_caja_style,
-                                            tiempo_transcurrido_style, titulo_hermoso_style)
+                                            tiempo_transcurrido_style, titulo_hermoso_style,boton_pagina_recuerdos_style)
 from por_siempre_raul_y_tatiana.components.estados import tiempoTranscurridoDeLaBoda
 
 def iconos_plantilla(icono:str) -> rx.Component:
@@ -13,7 +13,7 @@ años_transcurridos = tiempoTranscurridoDeLaBoda.años
 meses_transcurridos = tiempoTranscurridoDeLaBoda.meses
 dias_transcurridos = tiempoTranscurridoDeLaBoda.dias 
 
-def tiempo_transcurrido():
+def tiempo_transcurrido() -> rx.Component:
     return rx.box(
         rx.vstack(
             rx.heading(
@@ -67,4 +67,15 @@ def tiempo_transcurrido():
             ),
             style=tiempo_transcurrido_caja_style
         )
+    )
+
+def pagina_recuerdos_boton() -> rx.Component:
+    return rx.link(
+        rx.text(
+            "Viaja A Recuerdos Maravillosos ➡",
+            style=boton_pagina_recuerdos_style,
+            _hover= {"padding" : "14px"}
+        ),
+        href="/recuerdos",
+        
     )
