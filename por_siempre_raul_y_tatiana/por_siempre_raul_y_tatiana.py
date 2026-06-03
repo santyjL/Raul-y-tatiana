@@ -2,7 +2,7 @@ import reflex as rx
 from por_siempre_raul_y_tatiana.styles import body
 from por_siempre_raul_y_tatiana.components.imagenes import imagen_index, imagen_body
 from por_siempre_raul_y_tatiana.components.texto import texto_plantilla, texto_pequeño_plantilla, titulo_plantilla, titulo_plantilla_hersmoso
-from por_siempre_raul_y_tatiana.components.componentes import iconos_plantilla
+from por_siempre_raul_y_tatiana.components.componentes import iconos_plantilla,tiempo_transcurrido
 
 def index() -> rx.Component:
     return rx.box(
@@ -82,9 +82,13 @@ def index() -> rx.Component:
                 width="100%",
                 background="transparent",
             ),
-            imagen_index(
-                url="pagina-principal/BACKGROUND_FINAL.png",
-                texto_alternativo="final de agina"
+            rx.container(
+                tiempo_transcurrido(),
+                background_image=f"url({rx.asset("pagina-principal/BACKGROUND_FINAL.png")})",
+                background_color= "#cccccc",
+                width="100%",
+                height="800px",
+                background_size="cover"
             ),
             style=body
         )

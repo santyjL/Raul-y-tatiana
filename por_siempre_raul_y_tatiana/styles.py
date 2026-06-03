@@ -22,7 +22,8 @@ imagen_index_style= dict[str,str](
     padding=0,
     width="100%",
     height="auto",
-    loading="lazy"
+    loading="lazy",
+    z_index=10
 )
 
 imagen_body_style= dict[str,str](
@@ -81,4 +82,28 @@ iconos_plantilla_style=dict[str,str](
     display="flex",
     justify_content="center",
     align_items="center",
+)
+
+tiempo_transcurrido_caja_style=dict[str,str](
+    max_width="500px",
+    min_width="500px",
+    height="280px",
+    margin="200px auto",
+    border="2px solid #48e",
+    border_radius="15px",
+    box_shadow="0 0 90px 10px #48eb",
+    background=Colores.PRIMARIO.value,
+    z_index=20
+)
+
+tiempo_transcurrido_style=dict[str,str](
+    width="120px",
+    height="130px",
+    margin="2px 10px",
+    border="2px solid #fff",
+    border_radius="10px",
+    text_align="center",
+    background=Colores.SECUNDARIO.value,
+    font_family="Oranienbaum",
+    font_size="6em"
 )
