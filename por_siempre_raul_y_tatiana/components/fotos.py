@@ -33,10 +33,8 @@ from por_siempre_raul_y_tatiana.listas import (
 
 IMAGEN_CABECERA = "pagina-principal/nuestra_boda.png"
 
-
 def espaciador() -> rx.Component:
     return rx.divider(style=espaciador_style)
-
 
 def titulo_pagina(texto: str) -> rx.Component:
     return rx.heading(
@@ -44,10 +42,8 @@ def titulo_pagina(texto: str) -> rx.Component:
         style=combinar_estilos(titulo_hermoso_style, titulo_pagina_style),
     )
 
-
 def cabecera_boda() -> rx.Component:
     return imagen_index(url=IMAGEN_CABECERA, texto_alternativo="Nuestra boda")
-
 
 def pagina_fotos(titulo: str, contenido: rx.Component) -> rx.Component:
     return rx.box(
@@ -64,7 +60,6 @@ def pagina_fotos(titulo: str, contenido: rx.Component) -> rx.Component:
         ),
         style=body,
     )
-
 
 def grid_imagenes_principal(
     lista_imagenes: list[str],
@@ -97,7 +92,6 @@ def grid_imagenes_principal(
         style=grid_imagenes_principal_style,
     )
 
-
 def grid_imagenes(lista_imagenes: list[str]) -> rx.Component:
     return rx.grid(
         *[
@@ -125,46 +119,37 @@ def recuerdos() -> rx.Component:
         ),
     )
 
-
 @rx.page(routers.ENTRADA_IGLESIA.value)
 def entrada_iglesia() -> rx.Component:
     return pagina_fotos("El Recorrido", grid_imagenes(imagenes_entrada_iglesia))
-
 
 @rx.page(routers.IGLESIA.value)
 def iglesia() -> rx.Component:
     return pagina_fotos("El Amor", grid_imagenes(imagenes_iglesia))
 
-
 @rx.page(routers.DECORACION.value)
 def decoracion() -> rx.Component:
     return pagina_fotos("La Decoracion", grid_imagenes(imagenes_decoracion))
-
 
 @rx.page(routers.ENTRADA_NOVIOS.value)
 def entrada_novios() -> rx.Component:
     return pagina_fotos("La Gran Entrada", grid_imagenes(imagenes_entrada))
 
-
 @rx.page(routers.INVITADOS.value)
 def invitados() -> rx.Component:
     return pagina_fotos("Los Invitados", grid_imagenes(imagenes_mesas))
-
 
 @rx.page(routers.PALABRAS.value)
 def palabras() -> rx.Component:
     return pagina_fotos("Las Palabras", grid_imagenes(imagenes_palabras))
 
-
 @rx.page(routers.RAMO.value)
 def ramo() -> rx.Component:
     return pagina_fotos("El Ramo", grid_imagenes(imagenes_ramo))
 
-
 @rx.page(routers.BAILES.value)
 def bailes() -> rx.Component:
     return pagina_fotos("Los Bailes", grid_imagenes(imagenes_bailes))
-
 
 @rx.page(routers.FIESTA.value)
 def fiesta() -> rx.Component:
