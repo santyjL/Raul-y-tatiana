@@ -1,11 +1,27 @@
 import reflex as rx
-from por_siempre_raul_y_tatiana.styles import body
+from por_siempre_raul_y_tatiana.styles import (
+    body,
+    contenedor_pagina_style,
+    espaciador_style,
+    seccion_contenido_style,
+    seccion_hstack_style,
+)
 from por_siempre_raul_y_tatiana.components.imagenes import imagen_index, imagen_body
-from por_siempre_raul_y_tatiana.components.texto import texto_plantilla, texto_pequeño_plantilla, titulo_plantilla, titulo_plantilla_hersmoso
+from por_siempre_raul_y_tatiana.components.texto import (
+    texto_plantilla,
+    texto_pequeño_plantilla,
+    titulo_plantilla,
+    titulo_plantilla_hersmoso,
+)
 from por_siempre_raul_y_tatiana.components.componentes import iconos_plantilla
 from por_siempre_raul_y_tatiana.components.footer import pie_de_pagina
 from por_siempre_raul_y_tatiana.components.fotos import *
 from por_siempre_raul_y_tatiana.components.navbar import navbar
+
+
+def espaciador() -> rx.Component:
+    return rx.divider(style=espaciador_style)
+
 
 def index() -> rx.Component:
     return rx.box(
@@ -13,17 +29,17 @@ def index() -> rx.Component:
             navbar(),
             imagen_index(
                 url="pagina-principal/nuestra_boda.png",
-                texto_alternativo="Nuestra boda"
+                texto_alternativo="Nuestra boda",
             ),
             texto_plantilla("Te invitamos a recordar la alegria de unir nuestras vidas el dia"),
             imagen_index(
                 url="pagina-principal/fecha.png",
-                texto_alternativo="14 de septiembre del 2024"
+                texto_alternativo="14 de septiembre del 2024",
             ),
             titulo_plantilla("NUESTRA HISTORIA"),
             imagen_index(
                 url="pagina-principal/decoracion.png",
-                texto_alternativo="nuestra historia"
+                texto_alternativo="nuestra historia",
             ),
             texto_pequeño_plantilla(
                 """Hay días en la vida que son especiales por sí solos.
@@ -35,66 +51,47 @@ def index() -> rx.Component:
                 de esta historia 9 años después. hemos decidido unir
                 nuestras vidas para siempre.""",
             ),
-            rx.divider(
-                height="250px",
-                width="100%",
-                background="transparent",
-            ),
+            espaciador(),
             rx.hstack(
                 imagen_body(
                     url="pagina-principal/PRIMERA.png",
-                    texto_alternativo="Nuestra boda"
+                    texto_alternativo="Nuestra boda",
                 ),
                 rx.vstack(
-                    titulo_plantilla(
-                        "Ceremonia Religiosa"
-                        ),
-                    titulo_plantilla_hersmoso(
-                        "Parroquia San Juan Pablo II"
-                    ),
-                    iconos_plantilla(
-                        "church"
-                    ),
-                    width="50%",
-                )
+                    titulo_plantilla("Ceremonia Religiosa"),
+                    titulo_plantilla_hersmoso("Parroquia San Juan Pablo II"),
+                    iconos_plantilla("church"),
+                    style=seccion_contenido_style,
+                ),
+                style=seccion_hstack_style,
             ),
-            rx.divider(
-                height="250px",
-                width="100%",
-                background="transparent",
-            ),
+            espaciador(),
             rx.hstack(
                 rx.vstack(
-                    titulo_plantilla(
-                        "Recepción"
-                        ),
-                    titulo_plantilla_hersmoso(
-                        "Restaurante Pikitos Nica-Mex"
-                    ),
-                    iconos_plantilla(
-                        "party-popper"
-                    ),
-                    width="50%",
+                    titulo_plantilla("Recepción"),
+                    titulo_plantilla_hersmoso("Restaurante Pikitos Nica-Mex"),
+                    iconos_plantilla("party-popper"),
+                    style=seccion_contenido_style,
                 ),
                 imagen_body(
                     url="pagina-principal/RECEPCION.png",
-                    texto_alternativo="Recepción"
+                    texto_alternativo="Recepción",
                 ),
+                style=seccion_hstack_style,
             ),
-            rx.divider(
-                height="250px",
-                width="100%",
-                background="transparent",
-            ),
+            espaciador(),
             pie_de_pagina(),
-            style=body
-        )
+            spacing="4",
+            style=contenedor_pagina_style,
+        ),
+        style=body,
     )
+
 
 app = rx.App(
     stylesheets=[
-        "https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap"
-        "https://fonts.googleapis.com/css2?family=Oranienbaum&display=swap"
+        "https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap",
+        "https://fonts.googleapis.com/css2?family=Oranienbaum&display=swap",
     ]
 )
 app.add_page(index)
