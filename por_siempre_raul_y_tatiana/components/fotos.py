@@ -69,6 +69,12 @@ def recuerdos() -> rx.Component:
                 width="100%",
                 background="transparent",
             ),
+            rx.heading(
+                    "Recuerdos",
+                    style=titulo_hermoso_style,
+                    position="relative",
+                    top="-40px"
+                ),
             rx.center(
                 grid_imagenes_principal(
                     imagenes_recuerdos,
@@ -99,6 +105,12 @@ def entrada_iglesia() -> rx.Component:
                 width="100%",
                 background="transparent",
             ),
+            rx.heading(
+                    "El Recorrido",
+                    style=titulo_hermoso_style,
+                    position="relative",
+                    top="-40px"
+                ),
             grid_imagenes(imagenes_entrada_iglesia),
             rx.divider(
                 height="250px",
@@ -122,6 +134,12 @@ def iglesia() -> rx.Component:
                 width="100%",
                 background="transparent",
             ),
+        rx.heading(
+                "El Amor",
+                style=titulo_hermoso_style,
+                position="relative",
+                top="-40px"
+            ),
         grid_imagenes(imagenes_iglesia),
         rx.divider(
             height="250px",
@@ -143,6 +161,12 @@ def decoracion() -> rx.Component:
                 height="250px",
                 width="100%",
                 background="transparent",
+            ),
+        rx.heading(
+                "La Decoracion",
+                style=titulo_hermoso_style,
+                position="relative",
+                top="-40px"
             ),
         grid_imagenes(imagenes_decoracion),
         rx.divider(
@@ -166,6 +190,12 @@ def entrada_novios() -> rx.Component:
                 width="100%",
                 background="transparent",
             ),
+        rx.heading(
+                "La Gran Entrada",
+                style=titulo_hermoso_style,
+                position="relative",
+                top="-40px"
+            ),
         grid_imagenes(imagenes_entrada),
         rx.divider(
             height="250px",
@@ -187,6 +217,12 @@ def invitados() -> rx.Component:
                 height="250px",
                 width="100%",
                 background="transparent",
+            ),
+        rx.heading(
+                "Los Invitados",
+                style=titulo_hermoso_style,
+                position="relative",
+                top="-40px"
             ),
         grid_imagenes(imagenes_mesas),
         rx.divider(
@@ -210,6 +246,12 @@ def palabras() -> rx.Component:
                 width="100%",
                 background="transparent",
             ),
+        rx.heading(
+                "Las Palabras",
+                style=titulo_hermoso_style,
+                position="relative",
+                top="-40px"
+            ),
         grid_imagenes(imagenes_palabras),
         rx.divider(
             height="250px",
@@ -231,6 +273,12 @@ def ramo() -> rx.Component:
                 height="250px",
                 width="100%",
                 background="transparent",
+            ),
+        rx.heading(
+                "El Ramo",
+                style=titulo_hermoso_style,
+                position="relative",
+                top="-40px"
             ),
         grid_imagenes(imagenes_ramo),
         rx.divider(
@@ -254,6 +302,12 @@ def bailes() -> rx.Component:
                 width="100%",
                 background="transparent",
             ),
+        rx.heading(
+                "Los Bailes",
+                style=titulo_hermoso_style,
+                position="relative",
+                top="-40px"
+            ),
         grid_imagenes(imagenes_bailes),
         rx.divider(
             height="250px",
@@ -275,6 +329,12 @@ def fiesta() -> rx.Component:
                 height="250px",
                 width="100%",
                 background="transparent",
+            ),
+        rx.heading(
+                "La Fiesta",
+                style=titulo_hermoso_style,
+                position="relative",
+                top="-40px"
             ),
         grid_imagenes(imagenes_fiesta),
         rx.divider(
