@@ -7,9 +7,11 @@ def navbar_link(text: str, url: str) -> rx.Component:
         rx.text(
             text,
             style=titulo_style,
-            font_size="2.1em",
-            align_text="center",
-            color="#fff"
+            font_size="2.47em",
+            color="#fff",
+            position="relative",
+            top="-9px",
+            _hover={"bg" : "#48e"}
             ),
         href=url
     )
