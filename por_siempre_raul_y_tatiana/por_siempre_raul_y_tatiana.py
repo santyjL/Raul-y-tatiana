@@ -3,6 +3,7 @@ from por_siempre_raul_y_tatiana.styles import body
 from por_siempre_raul_y_tatiana.components.imagenes import imagen_index, imagen_body
 from por_siempre_raul_y_tatiana.components.texto import texto_plantilla, texto_pequeño_plantilla, titulo_plantilla, titulo_plantilla_hersmoso
 from por_siempre_raul_y_tatiana.components.componentes import iconos_plantilla,tiempo_transcurrido, pagina_recuerdos_boton
+from por_siempre_raul_y_tatiana.components.fotos import *
 
 def index() -> rx.Component:
     return rx.box(
@@ -102,3 +103,13 @@ app = rx.App(
     ]
 )
 app.add_page(index)
+app.add_page(recuerdos)
+app.add_page(entrada_iglesia)
+app.add_page(iglesia)
+app.add_page(decoracion)
+app.add_page(entrada_novios)
+app.add_page(invitados)
+app.add_page(palabras)
+app.add_page(ramo)
+app.add_page(bailes)
+app.add_page(fiesta)

@@ -34,6 +34,16 @@ imagen_body_style= dict[str,str](
     loading="lazy"
 )
 
+imagen_grid_style= dict[str,str](
+    width="85%",
+    height="400px",
+    object_fit="cover",
+    loading="lazy",
+    border_radius="8px",
+    align_items="center",
+    margin="10px auto"
+)
+
 titulo_style=dict[str,str](
     margin="10px auto",
     max_width="1400px",
