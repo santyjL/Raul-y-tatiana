@@ -123,16 +123,14 @@ boton_pagina_recuerdos_style=dict[str,str](
     font_size="1.7em",
     font_family="Dancing Script",
     max_width="400px",
+    height="60px",
     color="#fff",
-    margin="0 auto",
+    margin="5px auto",
     border="2px solid #fff",
     border_radius="15px",
     padding="10px 0",
-    position="relative",
-    top="-150px",
     box_shadow="0 0 40px 10px #48eb",
     background=Colores.PRIMARIO.value,
-    pointer="focus",
     transform="padding 1s ease",
 
 )

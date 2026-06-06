@@ -21,7 +21,7 @@ titulos_lista:list[str] = [
     "Las Palabras",
     "El Ramo",
     "Los Bailes",
-    "La fiesta"
+    "La Fiesta"
 ]
 
 imagenes_bailes: list[str] = [

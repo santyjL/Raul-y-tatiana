@@ -1,6 +1,8 @@
 import reflex as rx
+from reflex_image_zoom import image_zoom
 from por_siempre_raul_y_tatiana.styles import body, imagen_grid_style, titulo_hermoso_style
 from por_siempre_raul_y_tatiana.components.imagenes import imagen_index
+from por_siempre_raul_y_tatiana.components.footer import pie_de_pagina_2
 from por_siempre_raul_y_tatiana.listas import *
 from por_siempre_raul_y_tatiana.routers import routers
 
@@ -39,11 +41,14 @@ def grid_imagenes_principal(lista_imagenes: list[str], link:list[str],titulos:li
 def grid_imagenes(lista_imagenes: list[str], columnas: str = "3") -> rx.Component:
     return rx.grid(
         *[
-            rx.image(
-                src=rx.asset(url),
-                alt=url.split("/")[-1],
-                style=imagen_grid_style,
-            
+            image_zoom(
+                rx.image(
+                    src=rx.asset(url),
+                    alt=url.split("/")[-1],
+                    style=imagen_grid_style,
+                    _hover={"box-shadow" : "0 0 40px 0 #48e"}
+                ),
+                
             )for url in lista_imagenes
         ],
         columns=columnas,
@@ -70,7 +75,13 @@ def recuerdos() -> rx.Component:
                     links_imagenes,
                     titulos_lista
                 ),
-            )
+            ),
+            rx.divider(
+                height="250px",
+                width="100%",
+                background="transparent",
+            ),
+            pie_de_pagina_2()
         ),
         style=body,
     )
@@ -89,6 +100,12 @@ def entrada_iglesia() -> rx.Component:
                 background="transparent",
             ),
             grid_imagenes(imagenes_entrada_iglesia),
+            rx.divider(
+                height="250px",
+                width="100%",
+                background="transparent",
+            ),
+            pie_de_pagina_2()
         ),
         style=body,
     )
@@ -106,6 +123,12 @@ def iglesia() -> rx.Component:
                 background="transparent",
             ),
         grid_imagenes(imagenes_iglesia),
+        rx.divider(
+            height="250px",
+            width="100%",
+            background="transparent",
+        ),
+        pie_de_pagina_2(),
         style=body,
     )
 
@@ -122,6 +145,12 @@ def decoracion() -> rx.Component:
                 background="transparent",
             ),
         grid_imagenes(imagenes_decoracion),
+        rx.divider(
+            height="250px",
+            width="100%",
+            background="transparent",
+        ),
+        pie_de_pagina_2(),
         style=body,
     )
 
@@ -138,6 +167,12 @@ def entrada_novios() -> rx.Component:
                 background="transparent",
             ),
         grid_imagenes(imagenes_entrada),
+        rx.divider(
+            height="250px",
+            width="100%",
+            background="transparent",
+        ),
+        pie_de_pagina_2(),
         style=body,
     )
 
@@ -154,6 +189,12 @@ def invitados() -> rx.Component:
                 background="transparent",
             ),
         grid_imagenes(imagenes_mesas),
+        rx.divider(
+            height="250px",
+            width="100%",
+            background="transparent",
+        ),
+        pie_de_pagina_2(),
         style=body,
     )
 
@@ -170,6 +211,12 @@ def palabras() -> rx.Component:
                 background="transparent",
             ),
         grid_imagenes(imagenes_palabras),
+        rx.divider(
+            height="250px",
+            width="100%",
+            background="transparent",
+        ),
+        pie_de_pagina_2(),
         style=body,
     )
 
@@ -186,6 +233,12 @@ def ramo() -> rx.Component:
                 background="transparent",
             ),
         grid_imagenes(imagenes_ramo),
+        rx.divider(
+            height="250px",
+            width="100%",
+            background="transparent",
+        ),
+        pie_de_pagina_2(),
         style=body,
     )
 
@@ -202,6 +255,12 @@ def bailes() -> rx.Component:
                 background="transparent",
             ),
         grid_imagenes(imagenes_bailes),
+        rx.divider(
+            height="250px",
+            width="100%",
+            background="transparent",
+        ),
+        pie_de_pagina_2(),
         style=body,
     )
 
@@ -218,5 +277,11 @@ def fiesta() -> rx.Component:
                 background="transparent",
             ),
         grid_imagenes(imagenes_fiesta),
+        rx.divider(
+            height="250px",
+            width="100%",
+            background="transparent",
+        ),
+        pie_de_pagina_2(),
         style=body,
     )

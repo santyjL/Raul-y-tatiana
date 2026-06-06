@@ -69,13 +69,16 @@ def tiempo_transcurrido() -> rx.Component:
         )
     )
 
-def pagina_recuerdos_boton() -> rx.Component:
+def footer_boton(texto:str, link:str) -> rx.Component:
     return rx.link(
         rx.text(
-            "Viaja A Recuerdos Maravillosos ➡",
+            texto,
             style=boton_pagina_recuerdos_style,
             _hover= {"padding" : "14px"}
         ),
-        href="/recuerdos",
+        position="relative",
+        top="-180px",
+        heigth="60px",
+        href=link,
         
     )
