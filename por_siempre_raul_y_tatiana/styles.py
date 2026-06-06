@@ -3,6 +3,7 @@ from enum import Enum
 class Colores(Enum):
     BACKGROUND= "#f7f7f7"
     PRIMARIO="#136"
+    PRIMARIO_TRANSPARENTE="#136d"
     SECUNDARIO="#16a"
 
     BLANCO="#fff"
@@ -15,6 +16,17 @@ body= dict[str, str](
     text_align="center",
     background=Colores.BACKGROUND.value,
     background_size="cover"
+)
+
+navbar_style= dict[str,str](
+    width="50%",
+    height="60px",
+    background=Colores.PRIMARIO_TRANSPARENTE.value,
+    position="fixed",
+    margin="20px auto",
+    left="25%",
+    border_radius="20px",
+    z_index=50
 )
 
 imagen_index_style= dict[str,str](

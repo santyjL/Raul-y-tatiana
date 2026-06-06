@@ -5,10 +5,12 @@ from por_siempre_raul_y_tatiana.components.texto import texto_plantilla, texto_p
 from por_siempre_raul_y_tatiana.components.componentes import iconos_plantilla
 from por_siempre_raul_y_tatiana.components.footer import pie_de_pagina
 from por_siempre_raul_y_tatiana.components.fotos import *
+from por_siempre_raul_y_tatiana.components.navbar import navbar
 
 def index() -> rx.Component:
     return rx.box(
         rx.vstack(
+            navbar(),
             imagen_index(
                 url="pagina-principal/nuestra_boda.png",
                 texto_alternativo="Nuestra boda"

@@ -3,6 +3,7 @@ from reflex_image_zoom import image_zoom
 from por_siempre_raul_y_tatiana.styles import body, imagen_grid_style, titulo_hermoso_style
 from por_siempre_raul_y_tatiana.components.imagenes import imagen_index
 from por_siempre_raul_y_tatiana.components.footer import pie_de_pagina_2
+from por_siempre_raul_y_tatiana.components.navbar import navbar
 from por_siempre_raul_y_tatiana.listas import *
 from por_siempre_raul_y_tatiana.routers import routers
 
@@ -60,6 +61,7 @@ def grid_imagenes(lista_imagenes: list[str], columnas: str = "3") -> rx.Componen
 def recuerdos() -> rx.Component:
     return rx.box(
         rx.vstack(
+            navbar(),
             imagen_index(
                 url="pagina-principal/nuestra_boda.png",
                 texto_alternativo="Nuestra boda"
@@ -95,6 +97,7 @@ def recuerdos() -> rx.Component:
 @rx.page(routers.ENTRADA_IGLESIA.value)
 def entrada_iglesia() -> rx.Component:
     return rx.box(
+        navbar(),
         rx.vstack(
             imagen_index(
                 url="pagina-principal/nuestra_boda.png",
@@ -125,6 +128,7 @@ def entrada_iglesia() -> rx.Component:
 @rx.page(routers.IGLESIA.value)
 def iglesia() -> rx.Component:
     return rx.box(
+        navbar(),
         imagen_index(
             url="pagina-principal/nuestra_boda.png",
             texto_alternativo="Nuestra boda"
@@ -153,6 +157,7 @@ def iglesia() -> rx.Component:
 @rx.page(routers.DECORACION.value)
 def decoracion() -> rx.Component:
     return rx.box(
+        navbar(),
         imagen_index(
             url="pagina-principal/nuestra_boda.png",
             texto_alternativo="Nuestra boda"
@@ -181,6 +186,7 @@ def decoracion() -> rx.Component:
 @rx.page(routers.ENTRADA_NOVIOS.value)
 def entrada_novios() -> rx.Component:
     return rx.box(
+        navbar(),
         imagen_index(
             url="pagina-principal/nuestra_boda.png",
             texto_alternativo="Nuestra boda"
@@ -209,6 +215,7 @@ def entrada_novios() -> rx.Component:
 @rx.page(routers.INVITADOS.value)
 def invitados() -> rx.Component:
     return rx.box(
+        navbar(),
         imagen_index(
             url="pagina-principal/nuestra_boda.png",
             texto_alternativo="Nuestra boda"
@@ -237,6 +244,7 @@ def invitados() -> rx.Component:
 @rx.page(routers.PALABRAS.value)
 def palabras() -> rx.Component:
     return rx.box(
+        navbar(),
         imagen_index(
             url="pagina-principal/nuestra_boda.png",
             texto_alternativo="Nuestra boda"
@@ -265,6 +273,7 @@ def palabras() -> rx.Component:
 @rx.page(routers.RAMO.value)
 def ramo() -> rx.Component:
     return rx.box(
+        navbar(),
         imagen_index(
             url="pagina-principal/nuestra_boda.png",
             texto_alternativo="Nuestra boda"
@@ -293,6 +302,7 @@ def ramo() -> rx.Component:
 @rx.page(routers.BAILES.value)
 def bailes() -> rx.Component:
     return rx.box(
+        navbar(),
         imagen_index(
             url="pagina-principal/nuestra_boda.png",
             texto_alternativo="Nuestra boda"
@@ -321,6 +331,7 @@ def bailes() -> rx.Component:
 @rx.page(routers.FIESTA.value)
 def fiesta() -> rx.Component:
     return rx.box(
+        navbar(),
         imagen_index(
             url="pagina-principal/nuestra_boda.png",
             texto_alternativo="Nuestra boda"
