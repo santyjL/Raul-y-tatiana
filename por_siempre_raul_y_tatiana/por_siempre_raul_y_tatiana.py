@@ -18,11 +18,29 @@ from por_siempre_raul_y_tatiana.components.footer import pie_de_pagina
 from por_siempre_raul_y_tatiana.components.fotos import *
 from por_siempre_raul_y_tatiana.components.navbar import navbar
 
+titulo="Raul & Tatiana por siempre"
+descripcion="""Recuerda los momentos inolvidables de un dia tan especial
+                como lo fue nuestra boda, te invitamos a darte un recorrido
+                por todo lo que sucedio en aquel maravilloso dia"""
+preview="/assets/pagina-principal/preview.png"
 
 def espaciador() -> rx.Component:
     return rx.divider(style=espaciador_style)
 
-
+@rx.page(
+    route=routers.PRINCIPAL.value,
+    title=titulo,
+    description=descripcion,
+    image=preview,
+    meta=[
+        {"name": "og:type", "content": "website"},
+        {"name": "og:title", "content": titulo},
+        {"name": "og:description", "content": descripcion},
+        {"name": "og:image", "content": preview},
+        {"name": "twitter:card", "content": "summary_large_image"},
+        {"name": "twitter:site", "content": "@santyjL"},
+    ],
+)
 def index() -> rx.Component:
     return rx.box(
         rx.vstack(
