@@ -22,7 +22,7 @@ titulo="Raul & Tatiana por siempre"
 descripcion="""Recuerda los momentos inolvidables de un dia tan especial
                 como lo fue nuestra boda, te invitamos a darte un recorrido
                 por todo lo que sucedio en aquel maravilloso dia"""
-preview=rx.assent("pagina-principal/preview.png")
+preview=rx.asset("pagina-principal/preview.png")
 
 def espaciador() -> rx.Component:
     return rx.divider(style=espaciador_style)
